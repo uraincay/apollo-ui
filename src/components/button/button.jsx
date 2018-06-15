@@ -86,7 +86,7 @@ export default class Button extends Component {
     fixTwoCNChar() {
         const node = findDOMNode(this);
         const buttonText = node.textContent || node.innerText;
-        if (this.isNeedInserted() && isTwoCNChar(buttonText)) {
+        if (this.isNeedInsert() && isTwoCNChar(buttonText)) {
             if (!this.state.hasTwoCNChar) {
                 this.setState({
                     hasTwoCNChar: true
@@ -148,7 +148,7 @@ export default class Button extends Component {
         const iconType = loading ? 'loading' : icon;
         const iconNode = iconType ? <Icon type={iconType} /> : null;
         const kids = (children || children === 0)
-            ? React.Children.map(children, child => insertSpace(child, this.isNeedInserted())) : null;
+            ? React.Children.map(children, child => insertSpace(child, this.isNeedInsert())) : null;
 
         if ('href' in rest) {
             return (
