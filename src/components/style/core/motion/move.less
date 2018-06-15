@@ -1,0 +1,120 @@
+.move-motion(@className, @keyframeName) {
+  .make-motion(@className, @keyframeName);
+  .@{className}-enter,
+  .@{className}-appear {
+    opacity: 0;
+    animation-timing-function: @ease-out-circ;
+  }
+  .@{className}-leave {
+    animation-timing-function: @ease-in-circ;
+  }
+}
+
+.move-motion(move-up, apolloMoveUp);
+.move-motion(move-down, apolloMoveDown);
+.move-motion(move-left, apolloMoveLeft);
+.move-motion(move-right, apolloMoveRight);
+
+@keyframes apolloMoveDownIn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes apolloMoveDownOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes apolloMoveLeftIn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes apolloMoveLeftOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes apolloMoveRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes apolloMoveRightOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes apolloMoveUpIn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes apolloMoveUpOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 0 0;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

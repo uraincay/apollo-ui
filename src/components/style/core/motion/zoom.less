@@ -1,0 +1,160 @@
+.zoom-motion(@className, @keyframeName, @duration: @animation-duration-base) {
+  .make-motion(@className, @keyframeName, @duration);
+  .@{className}-enter,
+  .@{className}-appear {
+    transform: scale(0); // need this by yiminghe
+    animation-timing-function: @ease-out-circ;
+  }
+  .@{className}-leave {
+    animation-timing-function: @ease-in-out-circ;
+  }
+}
+
+// For Modal, Select choosen item
+.zoom-motion(zoom, apolloZoom);
+// For Popover, Popconfirm, Dropdown
+.zoom-motion(zoom-big, apolloZoomBig);
+// For Tooltip
+.zoom-motion(zoom-big-fast, apolloZoomBig, @animation-duration-fast);
+
+.zoom-motion(zoom-up, apolloZoomUp);
+.zoom-motion(zoom-down, apolloZoomDown);
+.zoom-motion(zoom-left, apolloZoomLeft);
+.zoom-motion(zoom-right, apolloZoomRight);
+
+@keyframes apolloZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes apolloZoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
+
+@keyframes apolloZoomBigIn {
+  0% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes apolloZoomBigOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+}
+
+@keyframes apolloZoomUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 0%;
+    transform: scale(.8);
+  }
+  100% {
+    transform-origin: 50% 0%;
+    transform: scale(1);
+  }
+}
+
+@keyframes apolloZoomUpOut {
+  0% {
+    transform-origin: 50% 0%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 0%;
+    transform: scale(.8);
+  }
+}
+
+@keyframes apolloZoomLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 50%;
+    transform: scale(.8);
+  }
+  100% {
+    transform-origin: 0% 50%;
+    transform: scale(1);
+  }
+}
+
+@keyframes apolloZoomLeftOut {
+  0% {
+    transform-origin: 0% 50%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 0% 50%;
+    transform: scale(.8);
+  }
+}
+
+@keyframes apolloZoomRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 50%;
+    transform: scale(.8);
+  }
+  100% {
+    transform-origin: 100% 50%;
+    transform: scale(1);
+  }
+}
+
+@keyframes apolloZoomRightOut {
+  0% {
+    transform-origin: 100% 50%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 100% 50%;
+    transform: scale(.8);
+  }
+}
+
+@keyframes apolloZoomDownIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 100%;
+    transform: scale(.8);
+  }
+  100% {
+    transform-origin: 50% 100%;
+    transform: scale(1);
+  }
+}
+
+@keyframes apolloZoomDownOut {
+  0% {
+    transform-origin: 50% 100%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 100%;
+    transform: scale(.8);
+  }
+}

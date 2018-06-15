@@ -1,0 +1,25 @@
+@import '../themes/default';
+@import "../mixins/iconfont";
+
+// font-face
+@font-face {
+  font-family: 'apolloicon';
+  src: url('@{icon-url}.eot'); /* IE9*/
+  src:
+  /* chrome、firefox */
+  url('@{icon-url}.woff') format('woff'),
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('@{icon-url}.ttf') format('truetype'),
+  /* iOS 4.1- */
+  url('@{icon-url}.svg#iconfont') format('svg');
+}
+
+.@{iconfont-css-prefix} {
+ .iconfont-mixin();
+}
+
+.@{iconfont-css-prefix}-down:before {content: "\e900";}
+.@{iconfont-css-prefix}-right:before {content: "\e901";}
+.@{iconfont-css-prefix}-right:before {content: "\e902";}
+.@{iconfont-css-prefix}-up:before {content: "\e903";}
+
