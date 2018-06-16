@@ -27,6 +27,10 @@
 @primary-9: color(~`colorPalette("@{primary-color}", 9)`);  // unused
 @primary-10: color(~`colorPalette("@{primary-color}", 10)`);  // unused
 
+@primary-11: @black-1;
+@primary-12: @black-2;
+@primary-21: @white-1;
+
 // Base Scaffolding Variables
 // ---
 
@@ -38,7 +42,7 @@
 @font-family            : "Monospaced Number", @font-family-no-number;
 @code-family            : Consolas, Menlo, Courier, monospace;
 @heading-color          : fade(#000, 85%);
-@text-color             : fade(#000, 65%);
+@text-color             : @black-1;
 @text-color-secondary   : fade(#000, 45%);
 @heading-color-dark     : fade(#fff, 100%);
 @text-color-dark        : fade(#fff,85%);
@@ -91,7 +95,7 @@
 @ease-in-out-quint   : cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base      : hsv(0, 0, 85%);  // base border outline a component
+@border-color-base      : @black-1;  // base border outline a component
 @border-color-split     : hsv(0, 0, 91%);  // split border inside a component
 @border-width-base      : 1px;            // width of the border for a component
 @border-style-base      : solid;          // style of a components border
@@ -120,18 +124,32 @@
 
 // Buttons
 @btn-font-weight        : 400;
-@btn-border-radius-base : @border-radius-base;
-@btn-border-radius-sm   : @border-radius-base;
+@btn-border-radius-base : 0;
+@btn-border-radius-sm   : 0;
 
-@btn-primary-color      : #fff;
-@btn-primary-bg         : @primary-color;
+@btn-primary-color      : @white-1;
+@btn-primary-bg         : @black-1;
+@btn-primary-border     : @black-1;
+@btn-primary-hover-color: @white-1;
+@btn-primary-hover-bg: @black-3;
+@btn-primary-hover-border: @black-3;
+@btn-primary-active-color: @white-1;
+@btn-primary-active-bg: @black-2;
+@btn-primary-active-border: @black-2;
+
 
 @btn-default-color      : @text-color;
-@btn-default-bg         : #fff;
+@btn-default-bg         : transparent;
 @btn-default-border     : @border-color-base;
+@btn-default-hover-color: @white-1;
+@btn-default-hover-bg: @black-1;
+@btn-default-hover-border: @black-1;
+@btn-default-active-color: @white-1;
+@btn-default-active-bg: @black-2;
+@btn-default-active-border: @black-2;
 
 @btn-danger-color       : @error-color;
-@btn-danger-bg          : @background-color-base;
+@btn-danger-bg          : transparent;
 @btn-danger-border      : @border-color-base;
 
 @btn-disable-color      : @disabled-color;
@@ -152,7 +170,7 @@
 @btn-circle-size-lg     : @btn-height-lg;
 @btn-circle-size-sm     : @btn-height-sm;
 
-@btn-group-border       : @primary-5;
+@btn-group-border       : @white-1;
 
 // Checkbox
 @checkbox-size          : 16px;
@@ -433,10 +451,19 @@
 
 // Pagination
 // ---
-@pagination-item-size: 32px;
-@pagination-item-size-sm: 24px;
+@pagination-item-size: 28px;
 @pagination-font-family: Arial;
 @pagination-font-weight-active: 500;
+
+@pagination-item-border: @gray-1;
+@pagination-item-active-color: @black-1;
+@pagination-item-active-bg: @gray-1;
+@pagination-item-active-border: @gray-1;
+@pagination-item-hover-color: @black-1;
+@pagination-item-hover-bg: @gray-2;
+@pagination-item-hover-border: @gray-2;
+
+
 
 // Breadcrumb
 // ---

@@ -18,8 +18,12 @@
  .iconfont-mixin();
 }
 
-.@{iconfont-css-prefix}-down:before {content: "\e900";}
-.@{iconfont-css-prefix}-right:before {content: "\e901";}
-.@{iconfont-css-prefix}-right:before {content: "\e902";}
-.@{iconfont-css-prefix}-up:before {content: "\e903";}
-
+.@{iconfont-css-prefix}-right:before {content: "\e900";}
+.@{iconfont-css-prefix}-up:before {content: "\e901";}
+.@{iconfont-css-prefix}-down:before {content: "\e902";}
+.@{iconfont-css-prefix}-left:before {content: "\e903";}
+.@{iconfont-css-prefix}-loading:before {content: "\e904";}
+.@{iconfont-css-prefix}-spin:before {
+  display: inline-block;
+  animation: loadingCircle 1s infinite linear;
+}

@@ -1,7 +1,8 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Icon from '../components/icon';
 import registerServiceWorker from './registerServiceWorker';
+import App from './app';
 
-ReactDOM.render(<Icon type="up" />, document.getElementById('root'));
+ReactDOM.render(<App  />, document.getElementById('root'));
 registerServiceWorker();

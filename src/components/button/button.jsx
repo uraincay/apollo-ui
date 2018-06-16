@@ -3,6 +3,7 @@ import {findDOMNode} from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../icon';
+import './style/index.less';
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
 const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
@@ -180,7 +181,7 @@ export default class Button extends Component {
 export const ButtonSize = PropTypes.oneOf(['large', 'default', 'small']);
 
 Button.propTypes = {
-    type: PropTypes.string,
+    type: PropTypes.oneOf(['primary', 'normal', 'danger']),
     shape: PropTypes.oneOf(['circle', 'circle-outline']),
     size: ButtonSize,
     htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
