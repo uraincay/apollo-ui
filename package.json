@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "lint": "npm run lint:es",
-    "lint:es": "eslint src config scripts --ext '.js,.jsx'"
+    "lint:es": "eslint src config scripts --ext '.js,.jsx'",
+    "lint-staged": "lint-staged"
   },
   "author": "",
   "license": "MIT",
@@ -32,10 +33,12 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
+    "lint-staged": "^7.2.0",
     "object-assign": "^4.1.1",
     "omit.js": "^1.0.0",
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-loader": "^2.1.5",
+    "pre-commit": "^1.2.2",
     "promise": "^8.0.1",
     "prop-types": "^15.6.1",
     "raf": "^3.4.0",
@@ -50,5 +53,12 @@
     "webpack-manifest-plugin": "^2.0.3",
     "whatwg-fetch": "^2.0.4"
   },
-  "devDependencies": {}
+  "lint-staged": {
+    "{src,config,scripts}/**/*.{js,jsx}": [
+      "eslint"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ]
 }
